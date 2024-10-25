@@ -1,4 +1,18 @@
-# Bibliotecas
+"""
+Projeto Para a seleção de estágio da Target Sistemas
+Nome: Paulo Mauricio Pereira Patricio
+Estudante: Análise e Desenvolvimento de Sistemas
+
+Atualize o número da versão aqui
+Versão: 1.0.1
+
+Descrição da Versão:
+- Melhorada a legibilidade da saída com inclusão de "\n".
+- Adicionado "input()" para pausar a tela e permitir melhor leitura dos resultados.
+
+- Biblioteca json, usada para ler dados em formato JSON de arquivos ou APIs e convertê-los para objetos Python, como
+  listas ou dicionários, para serem manipulados no código.
+"""
 import json
 
 
@@ -44,10 +58,10 @@ class FaturamentoDistribuidora:
         maior_faturamento_fmt = self.formatar_valor_brasileiro(maior_faturamento)
         media_faturamento_fmt = self.formatar_valor_brasileiro(media_faturamento)
 
-        print(f"Menor faturamento: R$ {menor_faturamento_fmt}")
-        print(f"Maior faturamento: R$ {maior_faturamento_fmt}")
-        print(f"Média de faturamento: R$ {media_faturamento_fmt}")
-        print(f"Dias com faturamento acima da média: {dias_acima_media}")
+        print(f"\nMenor faturamento: --------------- R$    {menor_faturamento_fmt}")
+        print(f"Maior faturamento: --------------- R$ {maior_faturamento_fmt}")
+        print(f"Média de faturamento: ------------ R$ {media_faturamento_fmt}")
+        print(f"Dias com faturamento acima da média: ------- {dias_acima_media}")
 
 
 # Carregar dados do arquivo JSON
@@ -56,4 +70,6 @@ with open('/11-Processo Seletivo Target/Faturamento Distribuidora/dados.json', '
 
 # Criar uma instância da classe e chamar o método para exibir os resultados
 faturamento = FaturamentoDistribuidora(faturamento_data)
+print("*" * 3 + " Análise do Faturamento da Distribuidora " + 3 * "*")
 faturamento.exibir_resultados()
+input()
