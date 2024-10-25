@@ -5,6 +5,7 @@ Este projeto lê um arquivo JSON contendo os valores diários de uma distribuido
 
 ## Funcionalidades
 - Cálculo do menor e maior valor de faturamento em um dia.
+- Cálculo da média mensal do Faturamento.
 - Identificação de quantos dias o valor de faturamento diário foi maior do que a média mensal.
 
 ## Estrutura dos Arquivos
@@ -33,7 +34,8 @@ Este projeto lê um arquivo JSON contendo os valores diários de uma distribuido
    ```
      cd distribuidora-analise-de-valores
 4. Certifique-se de que os arquivos "projeto_distribuidora.py" e "dados.json" estão no mesmo diretório.
-5. Execute o script:
+5. Não esquecer de colocar o diretório do arquivo "dados.json" na linha 68 do código.
+6. Execute o script:
    ```
      python projeto_distribuidora.py
 
